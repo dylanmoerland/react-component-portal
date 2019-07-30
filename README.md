@@ -53,4 +53,4 @@ export default () => (
 
 ## Example
 
-You can find the example in the (/example folder)[https://github.com/dylanmoerland/react-component-portal/tree/master/example]
+You can find the example in the [/example folder](https://github.com/dylanmoerland/react-component-portal/tree/master/example)
