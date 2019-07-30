@@ -1,13 +1,18 @@
-import React, { Component } from 'react'
+import React from 'react';
 
-import ExampleComponent from 'react-component-portal'
+import {
+  PortalProvider,
+  PortalDestination,
+  Portal,
+} from 'react-component-portal';
 
-export default class App extends Component {
-  render () {
-    return (
-      <div>
-        <ExampleComponent text='Modern React component module' />
-      </div>
-    )
-  }
-}
+export default () => (
+  <PortalProvider>
+    <main>
+      <PortalDestination name="example" />
+    </main>
+    <Portal destination="example">
+      <p>This will render in main</p>
+    </Portal>
+  </PortalProvider>
+);

@@ -1,31 +1,38 @@
-# react-component-portal
+# React component portal
 
-> 
+Transports the rendering of a component to a portal destination, in both React and React Native.
 
-[![NPM](https://img.shields.io/npm/v/react-component-portal.svg)](https://www.npmjs.com/package/react-component-portal) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-
-## Install
-
-```bash
-npm install --save react-component-portal
-```
+## Getting started
+Install `step-definition-generator` from "Install" in Atom's settings or run:
+`$ apm install step-definition-generator`
 
 ## Usage
 
-```jsx
-import React, { Component } from 'react'
-
-import MyComponent from 'react-component-portal'
-
-class Example extends Component {
-  render () {
-    return (
-      <MyComponent />
-    )
-  }
-}
+```
+$ npm install --save react-native-snap-carousel
 ```
 
-## License
+```
+import React from 'react';
 
-MIT © [dylanmoerland](https://github.com/dylanmoerland)
+import {
+  PortalProvider,
+  PortalDestination,
+  Portal,
+} from 'react-component-portal';
+
+export default () => (
+  <PortalProvider>
+    <main>
+      <PortalDestination name="example" />
+    </main>
+    <Portal destination="example">
+      <p>This will render in main</p>
+    </Portal>
+  </PortalProvider>
+);
+```
+
+## Example
+
+You can find the example in the (/example folder)[]
