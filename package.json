@@ -61,6 +61,8 @@
     "rollup-plugin-url": "^2.2.2"
   },
   "files": [
-    "dist"
-  ]
+    "dist",
+    "index.d.ts"
+  ],
+  "types": "./index.d.ts"
 }
