@@ -9,7 +9,7 @@ $ npm install --save react-component-portal
 ```
 
 `React: `
-```
+```jsx
 import React from 'react';
 
 import {
@@ -31,7 +31,7 @@ export default () => (
 ```
 
 `React Native:`
-```
+```jsx
 import React from 'react';
 import { View, Text } from 'react-native'
 
