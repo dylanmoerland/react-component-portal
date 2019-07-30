@@ -8,6 +8,7 @@ Transports the rendering of a component to a portal destination, in both React a
 $ npm install --save react-component-portal
 ```
 
+`React: `
 ```
 import React from 'react';
 
@@ -29,6 +30,7 @@ export default () => (
 );
 ```
 
+`React Native:`
 ```
 import React from 'react';
 import { View, Text } from 'react-native'
