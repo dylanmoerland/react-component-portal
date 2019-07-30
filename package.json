@@ -1,6 +1,6 @@
 {
   "name": "react-component-portal",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "Transports the rendering of a component to a portal destination",
   "author": "dylanmoerland",
   "license": "MIT",

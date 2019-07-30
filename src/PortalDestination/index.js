@@ -13,7 +13,7 @@ const PortalDestination = ({ name }) => {
     return () => {
       removeContainer(name, this);
     };
-  });
+  }, []);
 
   React.useEffect(() => {
     const length = renderContainer(name).length;

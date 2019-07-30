@@ -18,30 +18,31 @@ const useRegistery = () => {
   const children = React.useRef({}).current;
   const [currentId, setCurrentId] = React.useState(0);
 
-  const renderContainer = (name) =>
+  const renderContainer = React.useMemo(() => (name) =>
     children[name]
       ? Object.keys(children[name])
         .sort()
         .map((id) => children[name][id])
-      : [];
+      : []
+  , [children]);
 
-  const addContainer = React.useMemo((name, container) => {
+  const addContainer = React.useMemo(() => (name, container) => {
     containers[name] = container;
   }, [containers]);
 
-  const removeContainer = (name) => {
+  const removeContainer = React.useMemo(() => (name) => {
     containers[name] = null;
-  };
+  }, [containers]);
 
-  const addChild = React.useMemo((name, id, child) => {
+  const addChild = React.useMemo(() => (name, id, child) => {
     children[name][id] = child;
   }, [children]);
 
-  const clearChild = (name, id) => {
+  const clearChild = React.useMemo(() => (name, id) => {
     delete children[name][id];
-  };
+  }, [children]);
 
-  const register = React.useMemo((name, child) => {
+  const register = React.useMemo(() => (name, child) => {
     children[name] = children[name] || {};
 
     const id = `${name}_${currentId}`;
@@ -49,9 +50,9 @@ const useRegistery = () => {
     setCurrentId(currentId + 1);
 
     return id;
-  }, [setCurrentId, currentId]);
+  }, [children, currentId]);
 
-  const unregister = React.useMemo((name, id) => {
+  const unregister = React.useMemo(() => (name, id) => {
     clearChild(name, id);
   }, [clearChild]);
 
